@@ -3,7 +3,7 @@
   <entry>
     <title>Hello World</title>
     <url>/2024/04/06/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! 这是你的第一篇帖子。Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. 如果您在使用Hexo时遇到任何问题，可以在 <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 中找到答案。</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
 
 <p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
@@ -20,33 +20,5 @@
       <categories>
         <category>Hello World</category>
       </categories>
-  </entry>
-  <entry>
-    <title>这是一个标题</title>
-    <url>/2022/10/02/test/</url>
-    <content><![CDATA[<p>不要在这里写标题</p>
-]]></content>
-      <categories>
-        <category>fenlei</category>
-      </categories>
-      <tags>
-        <tag>Demo</tag>
-        <tag>Hexo</tag>
-        <tag>Hexo Theme</tag>
-        <tag>Hexo Theme Redefine</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>新的</title>
-    <url>/2024/04/06/%E6%96%B0%E7%9A%84/</url>
-    <content><![CDATA[<p>你好</p>
-]]></content>
-      <categories>
-        <category>科技</category>
-      </categories>
-      <tags>
-        <tag>科技</tag>
-        <tag>文学</tag>
-      </tags>
   </entry>
 </search>
