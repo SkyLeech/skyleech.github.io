@@ -21,4 +21,19 @@
         <category>Hello World</category>
       </categories>
   </entry>
+  <entry>
+    <title>新功能测试</title>
+    <url>/2024/04/06/%E6%96%B0%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p>《前端暴走团》，喜欢请抱走~</p>
+<p>朋友们好啊，我是前端娱乐威优易掌萌人林语冰。</p>
+<p>刚才有个朋友问我，UP 主发生肾摸事了？我说怎么回事！</p>
+<p>给我发了几张截图，我一看！嗷！原来是愚人节，Vue 翻译团队有 1 个 commit（代码提交），30 多行，一下增加 35 行，一下减少 35 行。</p>
+]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>new</tag>
+      </tags>
+  </entry>
 </search>
