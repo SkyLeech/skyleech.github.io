@@ -21,4 +21,312 @@
         <category>Hello World</category>
       </categories>
   </entry>
+  <entry>
+    <title>md学习</title>
+    <url>/2024/04/06/md%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="Markdown-标题语法"><a href="#Markdown-标题语法" class="headerlink" title="Markdown 标题语法"></a>Markdown 标题语法</h2><p>要创建标题，请在单词或短语前面添加井号 (<code>#</code>) 。<code>#</code> 的数量代表了标题的级别。例如，添加三个 <code>#</code> 表示创建一个三级标题 (<code>&lt;h3&gt;</code>) (例如：<code>### My Header</code>)。</p>
+<h2 id="Markdown-段落"><a href="#Markdown-段落" class="headerlink" title="Markdown 段落"></a>Markdown 段落</h2><p>要创建段落，请使用空白行将一行或多行文本进行分隔。</p>
+<p>不要用空格（spaces）或制表符（ tabs）缩进段落。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/04/06/zWjIoOBgyV2tSks.png"
+                      alt="image-20240406204215979"
+                ></p>
+<h2 id="Markdown-强调语法"><a href="#Markdown-强调语法" class="headerlink" title="Markdown 强调语法"></a>Markdown 强调语法</h2><h3 id="粗体（Bold）"><a href="#粗体（Bold）" class="headerlink" title="粗体（Bold）"></a>粗体（Bold）</h3><p>要加粗文本，请在单词或短语的前后各添加两个星号（asterisks）或下划线（underscores）。如需加粗一个单词或短语的中间部分用以表示强调的话，请在要加粗部分的两侧各添加两个星号（asterisks）。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>I just love **bold text**.</code></td>
+<td><code>I just love &lt;strong&gt;bold text&lt;/strong&gt;.</code></td>
+<td>I just love <strong>bold text</strong>.</td>
+</tr>
+<tr>
+<td><code>I just love __bold text__.</code></td>
+<td><code>I just love &lt;strong&gt;bold text&lt;/strong&gt;.</code></td>
+<td>I just love <strong>bold text</strong>.</td>
+</tr>
+<tr>
+<td><code>Love**is**bold</code></td>
+<td><code>Love&lt;strong&gt;is&lt;/strong&gt;bold</code></td>
+<td>Love<strong>is</strong>bold</td>
+</tr>
+</tbody></table>
+<p><strong>加粗了</strong> <strong>这个也是</strong></p>
+<p>Markdown 应用程序在如何处理单词或短语中间的下划线上并不一致。为兼容考虑，在单词或短语中间部分加粗的话，请使用星号（asterisks）。</p>
+<h3 id="斜体（Italic）"><a href="#斜体（Italic）" class="headerlink" title="斜体（Italic）"></a>斜体（Italic）</h3><p>要用斜体显示文本，请在单词或短语前后添加一个星号（asterisk）或下划线（underscore）。要斜体突出单词的中间部分，请在字母前后各添加一个星号，中间不要带空格。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Italicized text is the *cat&#39;s meow*.</code></td>
+<td><code>Italicized text is the &lt;em&gt;cat&#39;s meow&lt;/em&gt;.</code></td>
+<td>Italicized text is the <em>cat’s meow</em>.</td>
+</tr>
+<tr>
+<td><code>Italicized text is the _cat&#39;s meow_.</code></td>
+<td><code>Italicized text is the &lt;em&gt;cat&#39;s meow&lt;/em&gt;.</code></td>
+<td>Italicized text is the <em>cat’s meow</em>.</td>
+</tr>
+<tr>
+<td><code>A*cat*meow</code></td>
+<td><code>A&lt;em&gt;cat&lt;/em&gt;meow</code></td>
+<td>A<em>cat</em>meow</td>
+</tr>
+</tbody></table>
+<p><em>斜体</em> <em>1</em></p>
+<h2 id="粗体（Bold）和斜体（Italic）"><a href="#粗体（Bold）和斜体（Italic）" class="headerlink" title="粗体（Bold）和斜体（Italic）"></a>粗体（Bold）和斜体（Italic）</h2><p>要同时用粗体和斜体突出显示文本，请在单词或短语的前后各添加三个星号或下划线。要加粗并用斜体显示单词或短语的中间部分，请在要突出显示的部分前后各添加三个星号，中间不要带空格。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>This text is ***really important***.</code></td>
+<td><code>This text is &lt;strong&gt;&lt;em&gt;really important&lt;/em&gt;&lt;/strong&gt;.</code></td>
+<td>This text is <em><strong>really important</strong></em>.</td>
+</tr>
+<tr>
+<td><code>This text is ___really important___.</code></td>
+<td><code>This text is &lt;strong&gt;&lt;em&gt;really important&lt;/em&gt;&lt;/strong&gt;.</code></td>
+<td>This text is <em><strong>really important</strong></em>.</td>
+</tr>
+<tr>
+<td><code>This text is __*really important*__.</code></td>
+<td><code>This text is &lt;strong&gt;&lt;em&gt;really important&lt;/em&gt;&lt;/strong&gt;.</code></td>
+<td>This text is <em><strong>really important</strong></em>.</td>
+</tr>
+<tr>
+<td><code>This text is **_really important_**.</code></td>
+<td><code>This text is &lt;strong&gt;&lt;em&gt;really important&lt;/em&gt;&lt;/strong&gt;.</code></td>
+<td>This text is <em><strong>really important</strong></em>.</td>
+</tr>
+<tr>
+<td><code>This is really***very***important text.</code></td>
+<td><code>This is really&lt;strong&gt;&lt;em&gt;very&lt;/em&gt;&lt;/strong&gt;important text.</code></td>
+<td>This is really<em><strong>very</strong></em>important text.</td>
+</tr>
+</tbody></table>
+<p><em><strong>粗体和斜体</strong></em></p>
+<h2 id="Markdown-引用语法"><a href="#Markdown-引用语法" class="headerlink" title="Markdown 引用语法"></a>Markdown 引用语法</h2><p>要创建块引用，请在段落前添加一个 <code>&gt;</code> 符号。</p>
+<div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="code"><pre><span class="line">&gt; Dorothy followed her through many of the beautiful rooms in her castle.</span><br></pre></td></tr></table></figure></div>
+
+<p>渲染效果如下所示：</p>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+</blockquote>
+<blockquote>
+<p>引用</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+</blockquote>
+<h3 id="嵌套块引用"><a href="#嵌套块引用" class="headerlink" title="嵌套块引用"></a>嵌套块引用</h3><p>块引用可以嵌套。在要嵌套的段落前添加一个 <code>&gt;&gt;</code> 符号。</p>
+<div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="code"><pre><span class="line">&gt; Dorothy followed her through many of the beautiful rooms in her castle.</span><br><span class="line">&gt;</span><br><span class="line">&gt;&gt; The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</span><br></pre></td></tr></table></figure></div>
+
+<p>渲染效果如下：</p>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+<blockquote>
+<p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p>
+</blockquote>
+</blockquote>
+<h3 id="带有其它元素的块引用"><a href="#带有其它元素的块引用" class="headerlink" title="带有其它元素的块引用"></a>带有其它元素的块引用</h3><p>块引用可以包含其他 Markdown 格式的元素。并非所有元素都可以使用，你需要进行实验以查看哪些元素有效。</p>
+<div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="code"><pre><span class="line">&gt; #### The quarterly results look great!</span><br><span class="line">&gt;</span><br><span class="line">&gt; - Revenue was off the chart.</span><br><span class="line">&gt; - Profits were higher than ever.</span><br><span class="line">&gt;</span><br><span class="line">&gt;  *Everything* is going according to **plan**.</span><br></pre></td></tr></table></figure></div>
+
+<p>渲染效果如下：</p>
+<blockquote>
+<h4 id="The-quarterly-results-look-great"><a href="#The-quarterly-results-look-great" class="headerlink" title="The quarterly results look great!"></a>The quarterly results look great!</h4><ul>
+<li>Revenue was off the chart.</li>
+<li>Profits were higher than ever.</li>
+</ul>
+<p><em>Everything</em> is going according to <strong>plan</strong>.</p>
+</blockquote>
+<h2 id="Markdown-列表语法"><a href="#Markdown-列表语法" class="headerlink" title="Markdown 列表语法"></a>Markdown 列表语法</h2><p>可以将多个条目组织成有序或无序列表。</p>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>1. First item2. Second item3. Third item4. Fourth item</code></td>
+<td><code>&lt;ol&gt;&lt;li&gt;First item&lt;/li&gt;&lt;li&gt;Second item&lt;/li&gt;&lt;li&gt;Third item&lt;/li&gt;&lt;li&gt;Fourth item&lt;/li&gt;&lt;/ol&gt;</code></td>
+<td>1. First itemSecond 2. itemThird <br />3. itemFourth item</td>
+</tr>
+<tr>
+<td><code>1. First item1. Second item1. Third item1. Fourth item</code></td>
+<td><code>&lt;ol&gt;&lt;li&gt;First item&lt;/li&gt;&lt;li&gt;Second item&lt;/li&gt;&lt;li&gt;Third item&lt;/li&gt;&lt;li&gt;Fourth item&lt;/li&gt;&lt;/ol&gt;</code></td>
+<td>First itemSecond itemThird itemFourth item</td>
+</tr>
+<tr>
+<td><code>1. First item8. Second item3. Third item5. Fourth item</code></td>
+<td><code>&lt;ol&gt;&lt;li&gt;First item&lt;/li&gt;&lt;li&gt;Second item&lt;/li&gt;&lt;li&gt;Third item&lt;/li&gt;&lt;li&gt;Fourth item&lt;/li&gt;&lt;/ol&gt;</code></td>
+<td>First itemSecond itemThird itemFourth item</td>
+</tr>
+<tr>
+<td><code>1. First item2. Second item3. Third item  1. Indented item  2. Indented item4. Fourth item</code></td>
+<td><code>&lt;ol&gt;&lt;li&gt;First item&lt;/li&gt;&lt;li&gt;Second item&lt;/li&gt;&lt;li&gt;Third item&lt;ol&gt;&lt;li&gt;Indented item&lt;/li&gt;&lt;li&gt;Indented item&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;li&gt;Fourth item&lt;/li&gt;&lt;/ol&gt;</code></td>
+<td>First itemSecond itemThird itemIndented itemIndented itemFourth item</td>
+</tr>
+</tbody></table>
+<ol>
+<li>first</li>
+<li>second</li>
+<li>t<ol>
+<li>sd</li>
+<li>sd</li>
+</ol>
+</li>
+</ol>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+) 。缩进一个或多个列表项可创建嵌套列表。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>- First item- Second item- Third item- Fourth item</code></td>
+<td><code>&lt;ul&gt;&lt;li&gt;First item&lt;/li&gt;&lt;li&gt;Second item&lt;/li&gt;&lt;li&gt;Third item&lt;/li&gt;&lt;li&gt;Fourth item&lt;/li&gt;&lt;/ul&gt;</code></td>
+<td>- First itemSecond itemThird itemFourth item</td>
+</tr>
+<tr>
+<td><code>* First item* Second item* Third item* Fourth item</code></td>
+<td><code>&lt;ul&gt;&lt;li&gt;First item&lt;/li&gt;&lt;li&gt;Second item&lt;/li&gt;&lt;li&gt;Third item&lt;/li&gt;&lt;li&gt;Fourth item&lt;/li&gt;&lt;/ul&gt;</code></td>
+<td>First itemSecond itemThird itemFourth item</td>
+</tr>
+<tr>
+<td><code>+ First item+ Second item+ Third item+ Fourth item</code></td>
+<td><code>&lt;ul&gt;&lt;li&gt;First item&lt;/li&gt;&lt;li&gt;Second item&lt;/li&gt;&lt;li&gt;Third item&lt;/li&gt;&lt;li&gt;Fourth item&lt;/li&gt;&lt;/ul&gt;</code></td>
+<td>First itemSecond itemThird itemFourth item</td>
+</tr>
+<tr>
+<td><code>- First item- Second item- Third item  - Indented item  - Indented item- Fourth item</code></td>
+<td><code>&lt;ul&gt;&lt;li&gt;First item&lt;/li&gt;&lt;li&gt;Second item&lt;/li&gt;&lt;li&gt;Third item&lt;ul&gt;&lt;li&gt;Indented item&lt;/li&gt;&lt;li&gt;Indented item&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Fourth item&lt;/li&gt;&lt;/ul&gt;</code></td>
+<td>First itemSecond itemThird itemIndented itemIndented itemFourth item</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>sd</p>
+</li>
+<li><p>ds</p>
+</li>
+<li><p>asd</p>
+</li>
+<li><p>sd</p>
+<ul>
+<li>sd</li>
+<li>sd</li>
+</ul>
+</li>
+<li><p>sd</p>
+</li>
+</ul>
+<h2 id="Markdown-代码语法"><a href="#Markdown-代码语法" class="headerlink" title="Markdown 代码语法"></a>Markdown 代码语法</h2><p>要将单词或短语表示为代码，请将其包裹在反引号 (&#96;&#96;&#96;) 中。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>`At the command prompt, type &#39;nano&#39;.`</code></td>
+<td><code>At the command prompt, type &lt;code&gt;nano&lt;/code&gt;.</code></td>
+<td>At the command prompt, type <code>nano</code>.</td>
+</tr>
+</tbody></table>
+<h3 id="转义反引号"><a href="#转义反引号" class="headerlink" title="转义反引号"></a>转义反引号</h3><p>如果你要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号(&#96;&#96;&#96;&#96;)中。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>HTML</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&#39;&#39;Use `code` in your Markdown file.&#39;&#39;</code></td>
+<td><code>&lt;code&gt;Use </code>code<code> in your Markdown file.&lt;/code&gt;</code></td>
+<td><code>Use `code` in your Markdown file.</code></td>
+</tr>
+</tbody></table>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="Markdown-分隔线语法"><a href="#Markdown-分隔线语法" class="headerlink" title="Markdown 分隔线语法"></a>Markdown 分隔线语法</h2><p>要创建分隔线，请在单独一行上使用三个或多个星号 (<code>***</code>)、破折号 (<code>---</code>) 或下划线 (<code>___</code>) ，并且不能包含其他内容。</p>
+<div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">_________________</span><br></pre></td></tr></table></figure></div>
+
+<p>以上三个分隔线的渲染效果看起来都一样</p>
+<h2 id="Markdown-链接语法"><a href="#Markdown-链接语法" class="headerlink" title="Markdown 链接语法"></a>Markdown 链接语法</h2><p>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。</p>
+<p>超链接Markdown语法代码：<code>[超链接显示名](超链接地址 &quot;超链接title&quot;)</code></p>
+<p>对应的HTML代码：<code>&lt;a href=&quot;超链接地址&quot; title=&quot;超链接title&quot;&gt;超链接显示名&lt;/a&gt;</code></p>
+<div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="code"><pre><span class="line">这是一个链接 [Markdown语法](https://markdown.com.cn)。</span><br></pre></td></tr></table></figure></div>
+
+<p>渲染效果如下：</p>
+<p>这是一个链接 <a class="link"   href="https://markdown.com.cn/" >Markdown语法 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
+<p><a class="link"   href="https://baidu.com/" >百度一下 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="给链接增加-Title"><a href="#给链接增加-Title" class="headerlink" title="给链接增加 Title"></a>给链接增加 Title</h3><p>链接title是当鼠标悬停在链接上时会出现的文字，这个title是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔。</p>
+<div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="code"><pre><span class="line">这是一个链接 [Markdown语法](https://markdown.com.cn &quot;最好的markdown教程&quot;)。</span><br></pre></td></tr></table></figure></div>
+
+<p>渲染效果如下：</p>
+<p>这是一个链接 <a class="link"   href="https://markdown.com.cn/"  title="最好的markdown教程">Markdown语法 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
+<h3 id="网址和Email地址"><a href="#网址和Email地址" class="headerlink" title="网址和Email地址"></a>网址和Email地址</h3><p>使用尖括号可以很方便地把URL或者email地址变成可点击的链接。</p>
+<div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="code"><pre><span class="line">&lt;https://markdown.com.cn&gt;</span><br><span class="line">&lt;fake@example.com&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>渲染效果如下：</p>
+<p><a class="link"   href="https://markdown.com.cn/" >https://markdown.com.cn <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link"   href="mailto:&#102;&#97;&#x6b;&#x65;&#x40;&#x65;&#x78;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#111;&#109;" >&#102;&#97;&#x6b;&#x65;&#x40;&#x65;&#x78;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#111;&#109; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接</h3><p><a class="link"   href="https://markdown.com.cn/basic-syntax/links.html#emphasis" >强调 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 链接, 在链接语法前后增加星号。 要将链接表示为代码，请在方括号中添加反引号。</p>
+<div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="code"><pre><span class="line">I love supporting the **[EFF](https://eff.org)**.</span><br><span class="line">This is the *[Markdown Guide](https://www.markdownguide.org)*.</span><br><span class="line">See the section on [`code`](#code).</span><br></pre></td></tr></table></figure></div>
+
+<p>渲染效果如下：</p>
+<p>I love supporting the <strong><a class="link"   href="https://eff.org/" >EFF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></strong>.<br>This is the <em><a class="link"   href="https://www.markdownguide.org/" >Markdown Guide <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></em>.<br>See the section on <a href="https://markdown.com.cn/basic-syntax/links.html#code"><code>code</code></a>.</p>
+<h2 id="Markdown-图片语法"><a href="#Markdown-图片语法" class="headerlink" title="Markdown 图片语法"></a>Markdown 图片语法</h2><h3 id="链接图片"><a href="#链接图片" class="headerlink" title="链接图片"></a>链接图片</h3><p>给图片增加链接，请将图像的Markdown 括在方括号中，然后将链接添加在圆括号中。</p>
+<div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="code"><pre><span class="line">[![沙漠中的岩石图片](/assets/img/shiprock.jpg &quot;Shiprock&quot;)](https://markdown.com.cn)</span><br></pre></td></tr></table></figure></div>
+
+<p>渲染效果如下：</p>
+<p><a href="https://markdown.com.cn/"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://markdown.com.cn/assets/img/shiprock.c3b9a023.jpg"
+                      alt="沙漠中的岩石图片"
+                ></a></p>
+<h2 id="Markdown-任务列表语法"><a href="#Markdown-任务列表语法" class="headerlink" title="Markdown 任务列表语法"></a>Markdown 任务列表语法</h2><p>任务列表使您可以创建带有复选框的项目列表。在支持任务列表的Markdown应用程序中，复选框将显示在内容旁边。要创建任务列表，请在任务列表项之前添加破折号<code>-</code>和方括号<code>[ ]</code>，并在<code>[ ]</code>前面加上空格。要选择一个复选框，请在方括号<code>[x]</code>之间添加 x 。</p>
+<div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="code"><pre><span class="line">- [x] Write the press release</span><br><span class="line">- [ ] Update the website</span><br><span class="line">- [ ] Contact the media</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><input disabled="" type="checkbox"> 1</li>
+<li><input checked="" disabled="" type="checkbox"> 2</li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>md</tag>
+      </tags>
+  </entry>
 </search>
