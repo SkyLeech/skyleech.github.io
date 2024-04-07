@@ -22,8 +22,31 @@
       </categories>
   </entry>
   <entry>
-    <title>md学习</title>
-    <url>/2024/04/06/md%E5%AD%A6%E4%B9%A0/</url>
+    <title>JavaScript数组操作</title>
+    <url>/2024/04/07/JavaScript%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<h2 id="声明语法"><a href="#声明语法" class="headerlink" title="声明语法"></a>声明语法</h2><div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> 数组名 = [数据<span class="number">1</span>,数据<span class="number">2</span>, ..., 数据n]</span><br><span class="line"><span class="keyword">let</span> 数组名 = <span class="keyword">new</span> <span class="title class_">Array</span>(数据<span class="number">1</span>,数据<span class="number">2</span>, ..., 数据n)</span><br></pre></td></tr></table></figure></div>
+
+<p>数组里可以是任意类型</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">114514</span>,<span class="string">&quot;hello&quot;</span>,<span class="number">2.5</span>]</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="操作数组"><a href="#操作数组" class="headerlink" title="操作数组"></a>操作数组</h2><h3 id="增："><a href="#增：" class="headerlink" title="增："></a>增：</h3><div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">arr.<span class="title function_">push</span>(新增的内容) <span class="comment">//在末尾新增</span></span><br><span class="line">arr.<span class="title function_">unshift</span>(新增的内容) <span class="comment">//在头部新增</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="删："><a href="#删：" class="headerlink" title="删："></a>删：</h3><div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">arr.<span class="title function_">pop</span>() <span class="comment">//方法从数组中删除最后一个元素，并返回该元素的值</span></span><br><span class="line">arr.<span class="title function_">shift</span>() <span class="comment">//删除第一个元素</span></span><br><span class="line">arr.<span class="title function_">splice</span>(操作的下标,删除的个数) <span class="comment">//删除指定元素</span></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MarkDown语法学习</title>
+    <url>/2024/04/06/MarkDown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h2 id="Markdown-标题语法"><a href="#Markdown-标题语法" class="headerlink" title="Markdown 标题语法"></a>Markdown 标题语法</h2><p>要创建标题，请在单词或短语前面添加井号 (<code>#</code>) 。<code>#</code> 的数量代表了标题的级别。例如，添加三个 <code>#</code> 表示创建一个三级标题 (<code>&lt;h3&gt;</code>) (例如：<code>### My Header</code>)。</p>
 <h2 id="Markdown-段落"><a href="#Markdown-段落" class="headerlink" title="Markdown 段落"></a>Markdown 段落</h2><p>要创建段落，请使用空白行将一行或多行文本进行分隔。</p>
 <p>不要用空格（spaces）或制表符（ tabs）缩进段落。</p>
@@ -297,7 +320,7 @@
 <div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="code"><pre><span class="line">&lt;https://markdown.com.cn&gt;</span><br><span class="line">&lt;fake@example.com&gt;</span><br></pre></td></tr></table></figure></div>
 
 <p>渲染效果如下：</p>
-<p><a class="link"   href="https://markdown.com.cn/" >https://markdown.com.cn <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link"   href="mailto:&#x66;&#97;&#x6b;&#x65;&#64;&#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#x2e;&#99;&#x6f;&#109;" >&#x66;&#97;&#x6b;&#x65;&#64;&#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#x2e;&#99;&#x6f;&#109; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   href="https://markdown.com.cn/" >https://markdown.com.cn <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link"   href="mailto:&#x66;&#x61;&#107;&#x65;&#64;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#109;" >&#x66;&#x61;&#107;&#x65;&#64;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#109; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <h3 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接</h3><p><a class="link"   href="https://markdown.com.cn/basic-syntax/links.html#emphasis" >强调 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 链接, 在链接语法前后增加星号。 要将链接表示为代码，请在方括号中添加反引号。</p>
 <div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="code"><pre><span class="line">I love supporting the **[EFF](https://eff.org)**.</span><br><span class="line">This is the *[Markdown Guide](https://www.markdownguide.org)*.</span><br><span class="line">See the section on [`code`](#code).</span><br></pre></td></tr></table></figure></div>
 
@@ -328,10 +351,5 @@
         <tag>笔记</tag>
         <tag>md</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>新文章</title>
-    <url>/2024/04/07/%E6%96%B0%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[]]></content>
   </entry>
 </search>
