@@ -352,4 +352,44 @@
         <tag>md</tag>
       </tags>
   </entry>
+  <entry>
+    <title>JavaScript函数操作</title>
+    <url>/2024/04/08/JavaScript%E5%87%BD%E6%95%B0%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<h2 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h2><p>具名函数</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> 函数名(参数列表) &#123;</span><br><span class="line">    函数体</span><br><span class="line">    <span class="keyword">return</span> 返回值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">getSum</span>(<span class="params">num1, num2</span>) &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">write</span>(num1 + num2)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>如果不传参，默认是undefined</p>
+<p>undefined+undefined会出现NaN</p>
+<p>形参可以给默认值</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">getSum</span>(<span class="params">x = <span class="number">0</span>, y = <span class="number">0</span></span>)&#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">write</span>(num1 + num2)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h2><div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">函数名()</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><p>没有名字的函数，无法直接使用</p>
+<p>使用方式：</p>
+<ul>
+<li>函数表达式</li>
+<li>立即执行函数</li>
+</ul>
+<h3 id="1-函数表达式"><a href="#1-函数表达式" class="headerlink" title="1.函数表达式"></a>1.函数表达式</h3><p>将匿名函数赋值给一个变量，并且通过变量名称进行调用我们将这个称为函数表达式</p>
+<p>语法：</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> fn = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    函数体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-立即执行函数"><a href="#2-立即执行函数" class="headerlink" title="2.立即执行函数"></a>2.立即执行函数</h3><div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="keyword">function</span>(<span class="params">形参</span>)&#123;函数体&#125;)(实参); <span class="comment">//立即执行函数必须加分号</span></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
 </search>
