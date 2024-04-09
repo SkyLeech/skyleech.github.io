@@ -383,6 +383,41 @@
 
 <h3 id="2-立即执行函数"><a href="#2-立即执行函数" class="headerlink" title="2.立即执行函数"></a>2.立即执行函数</h3><div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="keyword">function</span>(<span class="params">形参</span>)&#123;函数体&#125;)(实参); <span class="comment">//立即执行函数必须加分号</span></span><br></pre></td></tr></table></figure></div>
 
+
+
+<h2 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h2><h3 id="动态参数"><a href="#动态参数" class="headerlink" title="动态参数"></a>动态参数</h3><p>arguments是函数内部内置的伪数组变量，它包含了调用函数时传入的所有实参</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> s = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i &lt; <span class="variable language_">arguments</span>.<span class="property">length</span>;i++)&#123;</span><br><span class="line">        s += <span class="variable language_">arguments</span>[i]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="剩余参数"><a href="#剩余参数" class="headerlink" title="剩余参数"></a>剩余参数</h3><p>剩余参数允许我们将一个不定数量的参数表示为一个数组</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">getSum</span>(<span class="params">...other</span>)&#123;</span><br><span class="line">    <span class="comment">// other得到[1,2,3]</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(other)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">getSum</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="展开运算符"><a href="#展开运算符" class="headerlink" title="展开运算符"></a>展开运算符</h2><p>展开运算符(…)，将一个数组进行展开</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">8</span>,<span class="number">2</span>]</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(...arr) <span class="comment">// 1 5 3 8 2</span></span><br></pre></td></tr></table></figure></div>
+
+<p>说明：</p>
+<ul>
+<li>不会修改原数组</li>
+</ul>
+<p>使用场景：</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="comment">//1 求数组最大最小值</span></span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">max</span>(...arr1)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2 合并数组</span></span><br><span class="line"><span class="keyword">const</span> arr2 = [<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="keyword">const</span> arr = [...arr1, ...arr2]</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><p>目的：引入箭头函数的目的是更简短的函数写法并且不绑定this，箭头函数的语法比函数表达式更简洁</p>
+<p>使用场景：箭头函数更适用于那些本来需要匿名函数的地方</p>
+<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">fn</span> = (<span class="params">x</span>) =&gt; &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(x)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//只有一个形参的时候，可以省略小括号</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">fn</span> = x =&gt; &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(x)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//只有一行代码的时候，可以省略大括号</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">fn</span> = x =&gt; <span class="variable language_">console</span>.<span class="title function_">log</span>(x)</span><br><span class="line"><span class="title function_">fn</span>(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//只有一行代码的时候，可以省略return</span></span><br><span class="line"><span class="comment">/*const fn = x =&gt; &#123;</span></span><br><span class="line"><span class="comment">    return x + x</span></span><br><span class="line"><span class="comment">&#125;*/</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">fn</span> = x =&gt; x + x</span><br><span class="line"><span class="title function_">fn</span>(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//箭头函数可以直接返回一个对象(加小括号的函数体返回对象字面量表达式)</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">fn</span> = uname =&gt; (&#123; <span class="attr">uname</span>: uname &#125;);</span><br><span class="line"><span class="title function_">fn</span>(<span class="string">&#x27;zhangsan&#x27;</span>);</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="箭头函数参数"><a href="#箭头函数参数" class="headerlink" title="箭头函数参数"></a>箭头函数参数</h3><p>箭头函数没有arguments动态参数，但是有剩余参数…args</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">getSum</span> = (<span class="params">...arr</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> sum = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i &lt; arr.<span class="property">length</span>;i++)&#123;</span><br><span class="line">        sum += arr[i]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">getSum</span>(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="箭头函数this"><a href="#箭头函数this" class="headerlink" title="箭头函数this"></a>箭头函数this</h3><p>以前this的指向：谁调用的这个函数，this就指向谁</p>
+<p>箭头函数不会创建自己的this，它只会从自己的作用域链的上一层沿用this</p>
 ]]></content>
       <categories>
         <category>JavaScript</category>
