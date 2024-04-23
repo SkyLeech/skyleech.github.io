@@ -496,26 +496,50 @@
       </tags>
   </entry>
   <entry>
-    <title>重庆旅游</title>
-    <url>/2024/04/20/%E9%87%8D%E5%BA%86%E6%97%85%E6%B8%B8/</url>
-    <content><![CDATA[<h2 id="周五"><a href="#周五" class="headerlink" title="周五"></a>周五</h2><p>中午直奔静香源火锅-&gt;吃完饭到凡·云顶江景私宿-&gt;解放碑附近逛-&gt;晚上大剧院看洪崖洞</p>
-<h2 id="周六"><a href="#周六" class="headerlink" title="周六"></a>周六</h2><p>早上吃小面(香宇面庄)-&gt;长江索道-&gt;龙门浩老街-&gt;下午上新街喝茶-&gt;晚上解放碑金色印象</p>
-<h2 id="周天"><a href="#周天" class="headerlink" title="周天"></a>周天</h2><p>早上晚点起来去易毛特色牛肉面-&gt;坐轻轨到重庆西站</p>
-]]></content>
-      <categories>
-        <category>旅游</category>
-      </categories>
-      <tags>
-        <tag>旅游</tag>
-        <tag>攻略</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++构造函数的一些注意事项</title>
     <url>/2024/04/23/C++%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>
-    <content><![CDATA[<h2 id="拷贝构造函数"><a href="#拷贝构造函数" class="headerlink" title="拷贝构造函数"></a>拷贝构造函数</h2><p>调用默认构造函数时候，不要加()</p>
+    <content><![CDATA[<h2 id="拷贝构造函数"><a href="#拷贝构造函数" class="headerlink" title="拷贝构造函数"></a>拷贝构造函数</h2><h3 id="拷贝构造函数调用时机"><a href="#拷贝构造函数调用时机" class="headerlink" title="拷贝构造函数调用时机"></a>拷贝构造函数调用时机</h3><p>C++中拷贝构造函数调用时机通常有三种情况</p>
+<ul>
+<li>使用一个已经创建完毕的对象来初始化一个新对象</li>
+<li>值传递的方式给函数参数传值</li>
+<li>以值方式返回局部对象</li>
+</ul>
+<h3 id="注意事项1："><a href="#注意事项1：" class="headerlink" title="注意事项1："></a>注意事项1：</h3><p>调用默认构造函数时候，不要加()</p>
 <p>因为下面这行代码，编译器会认为是一个函数的声明，不会认为在创建对象</p>
 <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">Person <span class="title">p1</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="注意事项2："><a href="#注意事项2：" class="headerlink" title="注意事项2："></a>注意事项2：</h3><p>不要利用拷贝构造函数 初始化匿名对象    编译器会认为Person(p3) &#x3D;&#x3D;&#x3D; Person p3（对象声明）</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//显示法创建对象</span></span><br><span class="line">Person p2 = <span class="built_in">Person</span>(<span class="number">10</span>); <span class="comment">// 有参构造</span></span><br><span class="line">Person p3 = <span class="built_in">Person</span>(p2); <span class="comment">//拷贝构造</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Person</span>(p3); <span class="comment">// 不要利用拷贝构造函数初始化匿名对象</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+<h2 id="构造函数调用规则"><a href="#构造函数调用规则" class="headerlink" title="构造函数调用规则"></a>构造函数调用规则</h2><p>默认情况下，C++编译器至少给一个类添加3个函数</p>
+<ol>
+<li>认构造函数（无参，函数体为空）</li>
+<li>默认析构函数（无参，函数体为空）</li>
+<li>默认拷贝构造函数，对属性进行值拷贝</li>
+</ol>
+<p>构造函数调用规则如下：</p>
+<ul>
+<li>如果用户定义<strong>有参</strong>构造函数，C++不在提供默认无参构造，<strong>但是会提供默认拷贝构造</strong></li>
+<li>如果用户定义<strong>拷贝</strong>构造函数，<strong>C++不会再提供其他构造函数</strong></li>
+</ul>
+<h2 id="深拷贝与浅拷贝"><a href="#深拷贝与浅拷贝" class="headerlink" title="深拷贝与浅拷贝"></a>深拷贝与浅拷贝</h2><p>浅拷贝：简单的赋值拷贝操作</p>
+<p>深拷贝：在<strong>堆区</strong>重新申请空间，进行拷贝操作</p>
+<p>在类中存在指针类型时会出现的问题：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/04/24/TKfEPg4H9cjkasR.png"
+                      alt="image-20240424003444756"
+                ></p>
+<p><strong>默认</strong>拷贝构造函数只会做<strong>浅拷贝</strong>操作，所以要利用深拷贝进行解决</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Person</span>(<span class="type">const</span> Person &amp;p)&#123;</span><br><span class="line">    m_Age = p.m_Age;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//m_Height = p.m_Height; 编译器默认实现就是这行代码</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//深拷贝操作</span></span><br><span class="line">    m_Height = <span class="keyword">new</span> <span class="built_in">int</span> (*p.m_Height) ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>当然，现在的编译器也会自动解决，不会报错</p>
+<h2 id="使用初始化列表方式初始化指针类型成员变量"><a href="#使用初始化列表方式初始化指针类型成员变量" class="headerlink" title="使用初始化列表方式初始化指针类型成员变量"></a>使用初始化列表方式初始化指针类型成员变量</h2><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//new在堆区创建内存</span></span><br><span class="line"><span class="built_in">Rectangle</span>(<span class="type">double</span> width, <span class="type">int</span> len) : <span class="built_in">width</span>(width), <span class="built_in">len</span>(<span class="keyword">new</span> <span class="built_in">int</span>(len)) &#123;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;有参构造&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 ]]></content>
       <categories>
