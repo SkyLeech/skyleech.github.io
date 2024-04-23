@@ -510,4 +510,22 @@
         <tag>攻略</tag>
       </tags>
   </entry>
+  <entry>
+    <title>C++构造函数的一些注意事项</title>
+    <url>/2024/04/23/C++%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>
+    <content><![CDATA[<h2 id="拷贝构造函数"><a href="#拷贝构造函数" class="headerlink" title="拷贝构造函数"></a>拷贝构造函数</h2><p>调用默认构造函数时候，不要加()</p>
+<p>因为下面这行代码，编译器会认为是一个函数的声明，不会认为在创建对象</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">Person <span class="title">p1</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>构造函数</tag>
+        <tag>类和对象</tag>
+        <tag>注意事项</tag>
+      </tags>
+  </entry>
 </search>
