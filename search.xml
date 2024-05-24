@@ -317,7 +317,7 @@
 <div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="code"><pre><span class="line">&lt;https://markdown.com.cn&gt;</span><br><span class="line">&lt;fake@example.com&gt;</span><br></pre></td></tr></table></figure></div>
 
 <p>渲染效果如下：</p>
-<p><a class="link"   href="https://markdown.com.cn/" >https://markdown.com.cn <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link"   href="mailto:&#102;&#97;&#107;&#101;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#46;&#99;&#111;&#x6d;" >&#102;&#97;&#107;&#101;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#46;&#99;&#111;&#x6d; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   href="https://markdown.com.cn/" >https://markdown.com.cn <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link"   href="mailto:&#102;&#x61;&#x6b;&#x65;&#x40;&#x65;&#120;&#x61;&#109;&#x70;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;" >&#102;&#x61;&#x6b;&#x65;&#x40;&#x65;&#120;&#x61;&#109;&#x70;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <h3 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接</h3><p><a class="link"   href="https://markdown.com.cn/basic-syntax/links.html#emphasis" >强调 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 链接, 在链接语法前后增加星号。 要将链接表示为代码，请在方括号中添加反引号。</p>
 <div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="code"><pre><span class="line">I love supporting the **[EFF](https://eff.org)**.</span><br><span class="line">This is the *[Markdown Guide](https://www.markdownguide.org)*.</span><br><span class="line">See the section on [`code`](#code).</span><br></pre></td></tr></table></figure></div>
 
@@ -548,6 +548,170 @@
         <tag>构造函数</tag>
         <tag>类和对象</tag>
         <tag>注意事项</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker基础</title>
+    <url>/2024/05/18/Docker%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h2 id="1-Docker基础"><a href="#1-Docker基础" class="headerlink" title="1.Docker基础"></a>1.Docker基础</h2><h3 id="1-1-常见命令"><a href="#1-1-常见命令" class="headerlink" title="1.1.常见命令"></a>1.1.常见命令</h3><p>首先我们来学习Docker中的常见命令，可以参考官方文档：</p>
+<p><a class="link"   href="https://docs.docker.com/engine/reference/commandline/cli/" >https://docs.docker.com/engine/reference/commandline/cli/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>Use the Docker command line<br>Docker’s CLI command description and usage</p>
+<h4 id="1-1-1-命令介绍"><a href="#1-1-1-命令介绍" class="headerlink" title="1.1.1.命令介绍"></a>1.1.1.命令介绍</h4><p>其中，比较常见的命令有：</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+<th>文档地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>docker pull</td>
+<td>拉取镜像</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/pull/" >docker pull <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker push</td>
+<td>推送镜像到DockerRegistry</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/push/" >docker push <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker images</td>
+<td>查看本地镜像</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/images/" >docker images <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker rmi</td>
+<td>删除本地镜像</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/rmi/" >docker rmi <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker run</td>
+<td>创建并运行容器（不能重复创建）</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/run/" >docker run <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker stop</td>
+<td>停止指定容器</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/stop/" >docker stop <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker start</td>
+<td>启动指定容器</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/start/" >docker start <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker restart</td>
+<td>重新启动容器</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/restart/" >docker restart <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker rm</td>
+<td>删除指定容器</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/rm/" >docs.docker.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker ps</td>
+<td>查看容器</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/ps/" >docker ps <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker logs</td>
+<td>查看容器运行日志</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/logs/" >docker logs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker exec</td>
+<td>进入容器</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/exec/" >docker exec <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker save</td>
+<td>保存镜像到本地压缩文件</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/save/" >docker save <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker load</td>
+<td>加载本地压缩文件到镜像</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/load/" >docker load <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker inspect</td>
+<td>查看容器详细信息</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/inspect/" >docker inspect <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+</tbody></table>
+<h3 id="2-2-数据卷"><a href="#2-2-数据卷" class="headerlink" title="2.2.数据卷"></a>2.2.数据卷</h3><h4 id="2-2-1-什么是数据卷"><a href="#2-2-1-什么是数据卷" class="headerlink" title="2.2.1.什么是数据卷"></a>2.2.1.什么是数据卷</h4><p><strong>数据卷（volume）</strong>是一个虚拟目录，是<strong>容器内目录</strong>与<strong>宿主机****目录</strong>之间映射的桥梁。</p>
+<p>以Nginx为例，我们知道Nginx中有两个关键的目录：</p>
+<ul>
+<li><p>html：放置一些静态资源</p>
+</li>
+<li><p>conf：放置配置文件</p>
+</li>
+</ul>
+<p>如果我们要让Nginx代理我们的静态资源，最好是放到html目录；如果我们要修改Nginx的配置，最好是找到conf下的nginx.conf文件。</p>
+<p>但遗憾的是，容器运行的Nginx所有的文件都在容器内部。所以我们必须利用数据卷将两个目录与宿主机目录关联，方便我们操作。如图：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/05/18/o2tCQVIP4qlDJS6.png"
+                      alt="image-20240518140210546"
+                ></p>
+<p>在上图中：</p>
+<ul>
+<li><p>我们创建了两个数据卷：conf、html</p>
+</li>
+<li><p>Nginx容器内部的conf目录和html目录分别与两个数据卷关联。</p>
+</li>
+<li><p>而数据卷conf和html分别指向了宿主机的&#x2F;var&#x2F;lib&#x2F;docker&#x2F;volumes&#x2F;conf&#x2F;_data目录和&#x2F;var&#x2F;lib&#x2F;docker&#x2F;volumes&#x2F;html&#x2F;_data目录</p>
+</li>
+</ul>
+<p>这样以来，容器内的conf和html目录就 与宿主机的conf和html目录关联起来，我们称为<strong>挂载</strong>。此时，我们操作宿主机的&#x2F;var&#x2F;lib&#x2F;docker&#x2F;volumes&#x2F;html&#x2F;_data就是在操作容器内的&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html&#x2F;_data目录。只要我们将静态资源放入宿主机对应目录，就可以被Nginx代理了。</p>
+<h4 id="1-2-2-数据卷命令"><a href="#1-2-2-数据卷命令" class="headerlink" title="1.2.2.数据卷命令"></a>1.2.2.数据卷命令</h4><p>数据卷的相关命令有：</p>
+<table>
+<thead>
+<tr>
+<th><strong>命令</strong></th>
+<th><strong>说明</strong></th>
+<th><strong>文档地址</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>docker volume create</td>
+<td>创建数据卷</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/volume_create/" >docker volume create <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker volume ls</td>
+<td>查看所有数据卷</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/volume_ls/" >docs.docker.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker volume rm</td>
+<td>删除指定数据卷</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/volume_prune/" >docs.docker.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker volume inspect</td>
+<td>查看某个数据卷的详情</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/volume_inspect/" >docs.docker.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td>docker volume prune</td>
+<td>清除数据卷</td>
+<td><a class="link"   href="https://docs.docker.com/engine/reference/commandline/volume_prune/" >docker volume prune <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+</tbody></table>
+<p>注意：容器与数据卷的挂载要在创建容器时配置，对于创建好的容器，是不能设置数据卷的。而且<strong>创建容器的过程中，数据卷会自动创建</strong>。</p>
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>Docker</tag>
+        <tag>Docker常用命令</tag>
+        <tag>Docker数据卷</tag>
       </tags>
   </entry>
 </search>
