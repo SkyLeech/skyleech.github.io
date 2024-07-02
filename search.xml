@@ -714,4 +714,127 @@
         <tag>Docker数据卷</tag>
       </tags>
   </entry>
+  <entry>
+    <title>C++友元</title>
+    <url>/2024/05/29/C++%E5%8F%8B%E5%85%83/</url>
+    <content><![CDATA[<p>在程序里，有些私有属性也想让类外特殊的一些函数或者类进行访问，就需要用到友元的技术</p>
+<p>友元的关键字为<code> friend</code></p>
+<p>友元的三种实现</p>
+<ul>
+<li><p>全局函数做友元</p>
+</li>
+<li><p>类做友元</p>
+</li>
+<li><p>成员函数做友元</p>
+</li>
+</ul>
+<h2 id="全局函数做友元"><a href="#全局函数做友元" class="headerlink" title="全局函数做友元"></a>全局函数做友元</h2><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Building</span>&#123;</span><br><span class="line">    <span class="comment">//告诉编译器goodGay全局函数是Building类的好朋友，可以访问类中的私有内容</span></span><br><span class="line">    <span class="function"><span class="keyword">friend</span> <span class="type">void</span> <span class="title">goodGay</span><span class="params">(Building *building)</span></span>;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    string m_SittingRoom;<span class="comment">//客厅</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">Building</span>()&#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;m_SittingRoom = <span class="string">&quot;客厅&quot;</span>;</span><br><span class="line">        <span class="keyword">this</span>-&gt;m_BedRoom = <span class="string">&quot;卧室&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    string m_BedRoom;<span class="comment">//卧室</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">goodGay</span><span class="params">(Building *building)</span></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;好基友正在访问：&quot;</span> &lt;&lt; building-&gt;m_SittingRoom &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;好基友正在访问：&quot;</span> &lt;&lt; building-&gt;m_BedRoom &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="类做友元"><a href="#类做友元" class="headerlink" title="类做友元"></a>类做友元</h2><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Building</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">GoodGay</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">GoodGay</span>();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">visit</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    Building *building;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Building</span> &#123;</span><br><span class="line">    <span class="comment">//GoodGay类是本类的好朋友，可以访问本类中私有成员</span></span><br><span class="line">    <span class="keyword">friend</span> <span class="keyword">class</span> <span class="title class_">GoodGay</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    string m_SittingRoom;<span class="comment">//客厅</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">Building</span>() &#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;m_SittingRoom = <span class="string">&quot;客厅&quot;</span>;</span><br><span class="line">        <span class="keyword">this</span>-&gt;m_BedRoom = <span class="string">&quot;卧室&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    string m_BedRoom;<span class="comment">//卧室</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">GoodGay::<span class="built_in">GoodGay</span>() &#123;</span><br><span class="line">    building = <span class="keyword">new</span> Building;<span class="comment">//创建建筑物对象</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">GoodGay::visit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;好基友正在访问：&quot;</span> &lt;&lt; building-&gt;m_SittingRoom &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;好基友正在访问：&quot;</span> &lt;&lt; building-&gt;m_BedRoom &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test01</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    GoodGay gg;</span><br><span class="line">    gg.<span class="built_in">visit</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="成员函数做友元"><a href="#成员函数做友元" class="headerlink" title="成员函数做友元"></a>成员函数做友元</h2>]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>C++</tag>
+        <tag>友元</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>毛中特期末复习</title>
+    <url>/2024/07/02/%E6%AF%9B%E4%B8%AD%E7%89%B9%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/02/DBKJuCPFNyw5voV.png"
+                      alt="image-20240702145036877"
+                ></p>
+<h2 id="第一讲"><a href="#第一讲" class="headerlink" title="第一讲"></a>第一讲</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/02/JAnwyYqiaOBmZxS.png"
+                      alt="image-20240702145001574"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/02/A7sXKRzjYD5T63I.png"
+                      alt="image-20240702145728670"
+                ></p>
+<p>知识点三见大纲</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/02/z3CABNoLGZS4Myc.png"
+                      alt="image-20240702150115402"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/02/x2lpTycQi7sfLCH.png"
+                      alt="image-20240702155604052"
+                ></p>
+<h2 id="第二讲"><a href="#第二讲" class="headerlink" title="第二讲"></a>第二讲</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/02/ns5GOjwqBhVKbrz.png"
+                      alt="image-20240702160947874"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/02/nMkC5xwKN7mHUfA.png"
+                      alt="image-20240702163838424"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/02/JImedSg84br9E6P.png"
+                      alt="image-20240702164731786"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/02/M9z546j1AFUpEBf.png"
+                      alt="image-20240702165041579"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/02/dWehtsZ21GqP5Ro.png"
+                      alt="image-20240702165423903"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/02/HPV1id2gmZDQcYG.png"
+                      alt="image-20240702165715515"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/02/IlUKNAyQuYn9xq6.png"
+                      alt="image-20240702170308071"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/02/1onXJYQ4cmS2klt.png"
+                      alt="image-20240702171915419"
+                ></p>
+]]></content>
+      <categories>
+        <category>期末</category>
+      </categories>
+      <tags>
+        <tag>期末</tag>
+        <tag>毛中特</tag>
+      </tags>
+  </entry>
 </search>
