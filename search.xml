@@ -1082,7 +1082,8 @@
                      data-src="https://s2.loli.net/2024/07/07/ZJoylrWAFbetfRS.png"
                       alt="image-20240707210028931"
                 ></p>
-<h2 id="三、面向对象"><a href="#三、面向对象" class="headerlink" title="三、面向对象"></a>三、面向对象</h2><h3 id="3-1-用例图"><a href="#3-1-用例图" class="headerlink" title="3.1 用例图"></a>3.1 用例图</h3><p>用例模型三要素：<strong>用例</strong>、<strong>参与者</strong>以及它们之间<strong>关系</strong>所组成</p>
+<h2 id="三、面向对象"><a href="#三、面向对象" class="headerlink" title="三、面向对象"></a>三、面向对象</h2><h3 id="3-1-用例图"><a href="#3-1-用例图" class="headerlink" title="3.1 用例图"></a>3.1 用例图</h3><p>什么是用例图：由参与者、用例以及它们之间的关系构成的用于描述系统功能的图</p>
+<p>用例模型三要素：<strong>用例</strong>、<strong>参与者</strong>以及它们之间<strong>关系</strong>所组成</p>
 <p><strong>角色</strong>有4种类型：<strong>系统的使用者</strong>，<strong>硬件设备</strong>，<strong>外部系统</strong>和<strong>时间</strong></p>
 <p>用例图中的<strong>关系</strong>：<strong>关联关系(角色与用例之间)、包含关系（基本用例与公共用例）、扩展关系（基本用例与特殊用例之间）、泛化关系（角色之间或用例之间）</strong></p>
 <p>示例：</p>
@@ -1134,6 +1135,8 @@
                      data-src="https://s2.loli.net/2024/07/07/DelGwLdMPfqrx5m.png"
                       alt="image-20240707212648140"
                 ></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>面向对象模型主要由以下哪些模型组成：对象模型、动态模型、功能模型</p>
+<p><strong>螺旋模型</strong>综合了<strong>瀑布模型</strong>和<strong>快速原型模型</strong>的优点，并增加了<strong>风险分析</strong>。</p>
 ]]></content>
       <categories>
         <category>期末</category>
