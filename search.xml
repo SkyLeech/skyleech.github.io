@@ -1064,7 +1064,7 @@
                      data-src="https://s2.loli.net/2024/07/07/X9E5hVnBajscSvb.png"
                       alt="image-20240707203938705"
                 ></p>
-<h2 id="二-需求工程"><a href="#二-需求工程" class="headerlink" title="二 需求工程"></a>二 需求工程</h2><h3 id="2-1可行性研究"><a href="#2-1可行性研究" class="headerlink" title="2.1可行性研究"></a>2.1可行性研究</h3><p><img  
+<h2 id="二、需求工程"><a href="#二、需求工程" class="headerlink" title="二、需求工程"></a>二、需求工程</h2><h3 id="2-1可行性研究"><a href="#2-1可行性研究" class="headerlink" title="2.1可行性研究"></a>2.1可行性研究</h3><p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://s2.loli.net/2024/07/07/DhIOAamRq5Y8d2U.png"
@@ -1081,6 +1081,58 @@
                      src="/images/loading.svg"
                      data-src="https://s2.loli.net/2024/07/07/ZJoylrWAFbetfRS.png"
                       alt="image-20240707210028931"
+                ></p>
+<h2 id="三、面向对象"><a href="#三、面向对象" class="headerlink" title="三、面向对象"></a>三、面向对象</h2><h3 id="3-1-用例图"><a href="#3-1-用例图" class="headerlink" title="3.1 用例图"></a>3.1 用例图</h3><p>用例模型三要素：<strong>用例</strong>、<strong>参与者</strong>以及它们之间<strong>关系</strong>所组成</p>
+<p><strong>角色</strong>有4种类型：<strong>系统的使用者</strong>，<strong>硬件设备</strong>，<strong>外部系统</strong>和<strong>时间</strong></p>
+<p>用例图中的<strong>关系</strong>：<strong>关联关系(角色与用例之间)、包含关系（基本用例与公共用例）、扩展关系（基本用例与特殊用例之间）、泛化关系（角色之间或用例之间）</strong></p>
+<p>示例：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/07/rDaxKoTHmhQY4lZ.png"
+                      alt="image-20240707212534133"
+                ></p>
+<h3 id="3-2-活动图"><a href="#3-2-活动图" class="headerlink" title="3.2 活动图"></a>3.2 活动图</h3><p>示例：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/07/yFb7U4ZYszPEacM.png"
+                      alt="image-20240707212310197"
+                ></p>
+<h3 id="3-3-状态图"><a href="#3-3-状态图" class="headerlink" title="3.3 状态图"></a>3.3 状态图</h3><p>示例：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/07/RBIKyle3NMuisSf.png"
+                      alt="image-20240707212402832"
+                ></p>
+<h3 id="3-4-顺序图"><a href="#3-4-顺序图" class="headerlink" title="3.4 顺序图"></a>3.4 顺序图</h3><p>顺序图由<strong>对象</strong>、<strong>生命线</strong>、<strong>激活框</strong>、<strong>消息</strong>等组成</p>
+<p>示例：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/07/Z8oOLIgqu3bmHR9.png"
+                      alt="image-20240707212455662"
+                ></p>
+<h3 id="3-5-类图"><a href="#3-5-类图" class="headerlink" title="3.5 类图"></a>3.5 类图</h3><p>类之间的<strong>关系</strong>：<strong>关联关系、聚合关系、组合关系、泛化关系</strong></p>
+<p>示例：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/07/CZ4zLiwMnNPq6Op.png"
+                      alt="image-20240707212619275"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/07/L3X48Fomi1Cujpb.png"
+                      alt="image-20240707212626123"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/07/07/DelGwLdMPfqrx5m.png"
+                      alt="image-20240707212648140"
                 ></p>
 ]]></content>
       <categories>
