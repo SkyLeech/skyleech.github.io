@@ -1150,9 +1150,9 @@
     <title>SpringBoot-配置文件小知识</title>
     <url>/2024/07/21/SpringBoot-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%B0%8F%E7%9F%A5%E8%AF%86/</url>
     <content><![CDATA[<h2 id="ConfigurationProperties"><a href="#ConfigurationProperties" class="headerlink" title="@ConfigurationProperties"></a>@ConfigurationProperties</h2><p>配置文件中<strong>key</strong>的名字必须和实体类中的<strong>属性名</strong>一致</p>
-<p>实体类必须有get&#x2F;set方法，所以要加**@Data**注解</p>
-<p>实体类交给ioc容器管理，加上@Component</p>
-<p>用**@ConfigurationProperties**指定前缀</p>
+<p>实体类必须有get&#x2F;set方法，所以要加__@Data__注解</p>
+<p>实体类交给ioc容器管理，加上__@Component__</p>
+<p>用__@ConfigurationProperties__指定前缀</p>
 <p>例：</p>
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ConfigurationProperties(prefix = &quot;aliyun.oss&quot;)</span></span><br></pre></td></tr></table></figure></div>
 
