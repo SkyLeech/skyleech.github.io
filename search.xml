@@ -820,4 +820,105 @@
         <tag>JWT</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Linux基础命令</title>
+    <url>/2024/09/03/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="一、Linux的目录结构"><a href="#一、Linux的目录结构" class="headerlink" title="一、Linux的目录结构"></a>一、Linux的目录结构</h2><h3 id="1-Linux的目录结构"><a href="#1-Linux的目录结构" class="headerlink" title="1.Linux的目录结构"></a>1.Linux的目录结构</h3><p>Linux的目录结构是一个树型结构，没有盘符概念，只有一个根目录<code>/</code></p>
+<h3 id="2-Linux路径的描述方式"><a href="#2-Linux路径的描述方式" class="headerlink" title="2.Linux路径的描述方式"></a>2.Linux路径的描述方式</h3><p>路径之间的层级关系使用<code>/</code>来表示</p>
+<p>如：</p>
+<p><code>/usr/local/hello.txt</code></p>
+<h2 id="二、Linux命令入门"><a href="#二、Linux命令入门" class="headerlink" title="二、Linux命令入门"></a>二、Linux命令入门</h2><h3 id="1-什么是命令、命令行"><a href="#1-什么是命令、命令行" class="headerlink" title="1.什么是命令、命令行"></a>1.什么是命令、命令行</h3><ul>
+<li>命令行：即Linux终端（Terminal），是一种命令提示符页面。以纯“字符”的形式操作系统，可以使用各种字符化命令对系统发出操作指令。</li>
+<li>命令：即Linux程序。一个命令就是一个Linux的程序。命令没有图形化页面，可以在命令行（终端中）提供字符化的反馈。</li>
+</ul>
+<h3 id="2-Linux命令基础格式"><a href="#2-Linux命令基础格式" class="headerlink" title="2.Linux命令基础格式"></a>2.Linux命令基础格式</h3><p><code>command [-options] [parameter]</code></p>
+<ul>
+<li>command：命令本身</li>
+<li>-options:[可选，非必填]命令的一些选项，可以通过选项控制命令的行为细节</li>
+<li>parameter:[可选,非必填]命令的参数,多数用于命令的指向目标等</li>
+</ul>
+<p><em>[]表示可选</em></p>
+<h3 id="3-ls命令入门"><a href="#3-ls命令入门" class="headerlink" title="3.ls命令入门"></a>3.ls命令入门</h3><p><code>ls [-a -l -h] [Linux路径]</code></p>
+<p>当不使用选项和参数,直接使用ls命令本体,表示：以<strong>平铺</strong>形式,列出当前工作目录下的内容</p>
+<ul>
+<li><p>-a选项，表示：all的意思，即列出全部文件（包含隐藏的文件&#x2F;文件夹)</p>
+<ul>
+<li><p>以<code>.</code>开头的，表示是Linux系统的隐藏文件&#x2F;文件夹（只要以<code>.</code>开头，就能自动隐藏）</p>
+</li>
+<li><p>只有通过-a选项，才能看到这些隐藏的文件&#x2F;文件夹</p>
+</li>
+</ul>
+</li>
+<li><p>-l选项，表示：以列表（竖向排列）的形式展示内容，并展示更多信息</p>
+</li>
+<li><p>-h 表示以易于阅读的形式，列出文件大小，如K、M、G</p>
+<ul>
+<li>-h选项必须要搭配<code>-l</code>一起使用</li>
+</ul>
+</li>
+</ul>
+<p>语法中的选项是可以组合使用的，比如学习的-a和-l可以组合应用。</p>
+<p>写法：</p>
+<ul>
+<li><code>ls -l -a</code></li>
+<li><code>ls -la</code></li>
+<li><code>ls -al</code></li>
+</ul>
+<h4 id="HOME目录和工作目录"><a href="#HOME目录和工作目录" class="headerlink" title="HOME目录和工作目录"></a>HOME目录和工作目录</h4><p>Linux系统的命令行终端，在启动的时候，默认会加载：</p>
+<ul>
+<li>当前登录用户的HOME目录作为当前工作目录，所以ls命令列出的是HOME目录的内容</li>
+<li>HOME目录：每个Linux操作用户在Linux系统的个人账户目录，路径在：&#x2F;home&#x2F;用户名<ul>
+<li>如，Linux用户是skyleech，其HOME目录是：&#x2F;home&#x2F;skyleech</li>
+<li>Windows系统和Linux系统，均设有用户的HOME目录</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-cd切换工作目录"><a href="#4-cd切换工作目录" class="headerlink" title="4.cd切换工作目录"></a>4.cd切换工作目录</h3><p>cd命令来自英文：<strong>C</strong>hange <strong>D</strong>irectory<br>语法：<code>cd [Linux路径]</code></p>
+<ul>
+<li>cd命令无需选项，只有参数，表示要切换到哪个目录下</li>
+<li>cd命令直接执行，不写参数，表示回到用户的HOME目录</li>
+</ul>
+<h3 id="5-pwd查看当前工作目录"><a href="#5-pwd查看当前工作目录" class="headerlink" title="5.pwd查看当前工作目录"></a>5.pwd查看当前工作目录</h3><p>pwd命令来自：<strong>P</strong>rint <strong>W</strong>ork <strong>D</strong>irectory<br>语法：<code>pwd</code></p>
+<ul>
+<li>pwd命令，无选项，无参数，直接输入pwd即可</li>
+</ul>
+<h3 id="6-绝对路径和相对路径"><a href="#6-绝对路径和相对路径" class="headerlink" title="6.绝对路径和相对路径"></a>6.绝对路径和相对路径</h3><ul>
+<li>绝对路径：以<strong>根目录</strong>为起点，描述路径的一种写法，路径描述以&#x2F;开头</li>
+<li>相对路径：以<strong>当前目录</strong>为起点，描述路径的一种写法，路径描述无需以&#x2F;开头</li>
+</ul>
+<h4 id="特殊路径符："><a href="#特殊路径符：" class="headerlink" title="特殊路径符："></a>特殊路径符：</h4><ul>
+<li><code>.</code>表示当前目录，比如cd.&#x2F;Desktop 表示切换到当前目录下的Desktop目录内，和cd Desktop效果一致</li>
+<li><code>..</code>表示上一级目录，比如：cd．即可切换到上一级目录，cd..&#x2F;.．切换到上二级的目录</li>
+<li><code>~</code>表示HOME目录，比如：Cd～即可切换到HOME目录或cd～&#x2F;Desktop，切换到HOME内的Desktop目录</li>
+</ul>
+<h3 id="7-mkdir创建目录"><a href="#7-mkdir创建目录" class="headerlink" title="7.mkdir创建目录"></a>7.mkdir创建目录</h3><p>通过mkdir命令可以创建新的目录 （文件夹）<br>mkdir来自英文：<strong>M</strong>a<strong>k</strong>e <strong>Dir</strong>ectory<br>语法：<code>mkdir [-p] Linux路径</code></p>
+<ul>
+<li>参数必填，表示Linux路径，即要创建的文件夹的路径，相对路径或绝对路径均可</li>
+<li>-p选项可选，表示自动创建不存在的父目录，适用于创建连续多层级的目录</li>
+</ul>
+<h3 id="8-touch创建文件"><a href="#8-touch创建文件" class="headerlink" title="8.touch创建文件"></a>8.touch创建文件</h3><p>语法：<code>touch Linux路径</code></p>
+<ul>
+<li>touch命令无选项，参数必填，表示要创建的文件路径，相对、绝对、特殊路径符均可以使用</li>
+</ul>
+<h3 id="9-cat查看文件内容"><a href="#9-cat查看文件内容" class="headerlink" title="9.cat查看文件内容"></a>9.cat查看文件内容</h3><p>语法：<code>cat Linux路径</code></p>
+<ul>
+<li>cat同样没有选项，只有必填参数，参数表示：被查看的文件路径，相对、绝对、特殊路径符都可以使用</li>
+</ul>
+<h3 id="10-more查看文件内容"><a href="#10-more查看文件内容" class="headerlink" title="10.more查看文件内容"></a>10.more查看文件内容</h3><p>more命令同样可以查看文件内容，同cat不同的是:</p>
+<ul>
+<li>cat是直接将内容全部显示出来</li>
+<li>more支持翻页，如果文件内容过多，可以一页页的展示</li>
+</ul>
+<p>语法：<code>more Linux路径</code></p>
+<ul>
+<li>同样没有选项，只有必填参数，参数表示：被查看的文件路径，相对、绝对、特殊路径符都可以使用</li>
+</ul>
+<p>Linux系统内置有一个文件，路径为：&#x2F;etc&#x2F;services，可以使用more命令查看</p>
+<p><code>more /etc/services</code></p>
+<ul>
+<li>在查看的过程中，通过空格翻页</li>
+<li>通过q退出查看</li>
+</ul>
+]]></content>
+  </entry>
 </search>
