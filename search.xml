@@ -1280,4 +1280,46 @@
         <tag>Mybatis-Plus</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Swagger3 GET请求使用对象接收 Query 参数，注解怎么写？</title>
+    <url>/2024/10/22/Swagger3-GET%E8%AF%B7%E6%B1%82%E4%BD%BF%E7%94%A8%E5%AF%B9%E8%B1%A1%E6%8E%A5%E6%94%B6-Query-%E5%8F%82%E6%95%B0%EF%BC%8C%E6%B3%A8%E8%A7%A3%E6%80%8E%E4%B9%88%E5%86%99%EF%BC%9F/</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>从 Swagger2 迁移到 Swagger3，遇到一个问题：Swagger3 如何处理 GET 请求的对象参数？</p>
+<p>在 Swagger2 中，接口上不需要添加额外的 Swagger 注解，参数类添加 <code>@ApiModel</code> 注解，参数类的字段添加 @ApiModelProperty 注解即可。</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Swagger2</span></span><br><span class="line"><span class="meta">@GetMapping(&quot;/page&quot;)</span></span><br><span class="line"><span class="meta">@ApiOperation(&quot;员工分页查询&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;PageResult&gt; <span class="title function_">page</span><span class="params">(EmployeePageQueryDTO employeePageQueryDTO)</span> &#123;</span><br><span class="line">    <span class="type">PageResult</span> <span class="variable">pageResult</span> <span class="operator">=</span> employeeService.pageQuery(employeePageQueryDTO);</span><br><span class="line">    <span class="keyword">return</span> Result.success(pageResult);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>迁移到 Swagger3 后，注解发生了变化，参考对照表修改了注解：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Api</span> → <span class="meta">@Tag</span></span><br><span class="line"><span class="meta">@ApiIgnore</span> → <span class="meta">@Parameter(hidden = true)</span> or <span class="meta">@Operation(hidden = true)</span> or <span class="meta">@Hidden</span></span><br><span class="line"><span class="meta">@ApiImplicitParam</span> → <span class="meta">@Parameter</span></span><br><span class="line"><span class="meta">@ApiImplicitParams</span> → <span class="meta">@Parameters</span></span><br><span class="line"><span class="meta">@ApiModel</span> → <span class="meta">@Schema</span></span><br><span class="line"><span class="meta">@ApiModelProperty(hidden = true)</span> → <span class="meta">@Schema(accessMode = READ_ONLY)</span></span><br><span class="line"><span class="meta">@ApiModelProperty</span> → <span class="meta">@Schema</span></span><br><span class="line"><span class="meta">@ApiOperation(value = &quot;foo&quot;, notes = &quot;bar&quot;)</span> → <span class="meta">@Operation(summary = &quot;foo&quot;, description = &quot;bar&quot;)</span></span><br><span class="line"><span class="meta">@ApiParam</span> → <span class="meta">@Parameter</span></span><br><span class="line"><span class="meta">@ApiResponse(code = 404, message = &quot;foo&quot;)</span> → <span class="meta">@ApiResponse(responseCode = &quot;404&quot;, description = &quot;foo&quot;)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Swagger3</span></span><br><span class="line"><span class="meta">@GetMapping(&quot;/page&quot;)</span></span><br><span class="line"><span class="meta">@Operation(summary = &quot;部门分页查询&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;PageResult&gt; <span class="title function_">page</span><span class="params">(DeptPageQuery deptPageQuery)</span> &#123;</span><br><span class="line">    <span class="type">PageResult</span> <span class="variable">pageResult</span> <span class="operator">=</span> deptService.pageQuery(deptPageQuery);</span><br><span class="line">    <span class="keyword">return</span> Result.success(pageResult);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>但是这样写实际展示效果不符合预期，查询参数展示成了一个 Object：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/10/22/MbsvEPNaTtpijRX.png"
+                      alt="err.png"
+                ></p>
+<p>期望效果是：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s2.loli.net/2024/10/22/DuforjOaHkBCse5.png"
+                      alt="suss.png"
+                ></p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>一路搜寻到了 Swagger API 的 Github：<a class="link"   href="https://github.com/swagger-api/swagger-core/issues/4177" >https://github.com/swagger-api/swagger-core/issues/4177 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>很简单，请求方法参数上加 <code>@ParameterObject</code> 注解</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/page&quot;)</span></span><br><span class="line"><span class="meta">@Operation(summary = &quot;部门分页查询&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;PageResult&gt; <span class="title function_">page</span><span class="params">(<span class="meta">@ParameterObject</span> DeptPageQuery deptPageQuery)</span> &#123;</span><br><span class="line">    <span class="type">PageResult</span> <span class="variable">pageResult</span> <span class="operator">=</span> deptService.pageQuery(deptPageQuery);</span><br><span class="line">    <span class="keyword">return</span> Result.success(pageResult);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>但注意这个是 springdoc-openapi-common 包下的注解，不是 swagger-annotations 包内的</p>
+]]></content>
+      <categories>
+        <category>SpringBoot</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>SpringBoot</tag>
+        <tag>Mybatis-Plus</tag>
+        <tag>注解</tag>
+      </tags>
+  </entry>
 </search>
