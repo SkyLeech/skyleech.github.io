@@ -1296,14 +1296,14 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://s2.loli.net/2024/10/22/MbsvEPNaTtpijRX.png"
+                     data-src="https://img.skyleech.me/2024/10/24/37d807e4cafada3f36bf5a4931a7417d.png"
                       alt="err.png"
                 ></p>
 <p>期望效果是：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://s2.loli.net/2024/10/22/DuforjOaHkBCse5.png"
+                     data-src="https://img.skyleech.me/2024/10/24/dfcffd8d692f44297b94df523616ad4f.png"
                       alt="suss.png"
                 ></p>
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>一路搜寻到了 Swagger API 的 Github：<a class="link"   href="https://github.com/swagger-api/swagger-core/issues/4177" >https://github.com/swagger-api/swagger-core/issues/4177 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
