@@ -1322,4 +1322,48 @@
         <tag>注解</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Shell脚本入门</title>
+    <url>/2024/09/29/Shell%E8%84%9A%E6%9C%AC%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h2 id="Shell脚本文件编写规范"><a href="#Shell脚本文件编写规范" class="headerlink" title="Shell脚本文件编写规范"></a>Shell脚本文件编写规范</h2><h3 id="后缀名规范"><a href="#后缀名规范" class="headerlink" title="后缀名规范"></a>后缀名规范</h3><p>建议用<code>.sh</code>结尾</p>
+<h3 id="首行格式规范"><a href="#首行格式规范" class="headerlink" title="首行格式规范"></a>首行格式规范</h3><p>首行需要设置Shell解析器的类型，语法</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>含义：设置当前Shell脚本文件采用bash解析器运行</p>
+</blockquote>
+<h3 id="注释格式"><a href="#注释格式" class="headerlink" title="注释格式"></a>注释格式</h3><p>单行注释，语法</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">注释内容</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>多行注释，语法</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">:&lt;&lt;!</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">注释内容1</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">注释内容2</span></span><br><span class="line">!</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="脚本文件的常用执行3种方式"><a href="#脚本文件的常用执行3种方式" class="headerlink" title="脚本文件的常用执行3种方式"></a>脚本文件的常用执行3种方式</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>1.sh解析器执行方式<br>    语法：<code>sh 脚本文件</code><br>    介绍：就是利用sh命令执行脚本文件，本质就是使用Shel解析器运行脚本文件<br>2.bash解析器执行方式<br>    语法：<code>bash 脚本文件</code><br>    介绍：就是利用bash命令执行脚本文件，本质就是使用Shel解析器运行脚本文件<br>3.仅路径执行方式<br>    语法：<code>./脚本文件</code><br>    介绍：执行当前目录下的脚本文件<br>    注意：脚本文件自己执行需要具有可执行权限，否则无法执行</p>
+<h3 id="3种方式的区别"><a href="#3种方式的区别" class="headerlink" title="3种方式的区别"></a>3种方式的区别</h3><p>sh或bash执行脚本文件方式是直接使用Shell解析器运行脚本文件,不需要可执行权限，但仅路径执行脚本文件自己，需要可执行权限</p>
+<h2 id="自定义变量"><a href="#自定义变量" class="headerlink" title="自定义变量"></a>自定义变量</h2><h3 id="自定义局部变量"><a href="#自定义局部变量" class="headerlink" title="自定义局部变量"></a>自定义局部变量</h3><h4 id="定义与使用"><a href="#定义与使用" class="headerlink" title="定义与使用"></a>定义与使用</h4><p>定义语法</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">var_name=value</span><br></pre></td></tr></table></figure></div>
+
+<p>变量定义规则</p>
+<p>​	1.变量名称可以有字母，数字和下划线组成，但是不能以数字开头<br>​	2.等号两侧不能有空格<br>​	3.在bash环境中，变量的默认类型都是字符串类型，无法直接进行数值运算<br>​	4.变量的值如果有空格，必须使用双引号括起来<br>​	5.不能使用Shell的关键字作为变量名称</p>
+<p>查询变量值语法</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$</span><span class="language-bash">var_name</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">&#123;var_name&#125;</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">区别：花括号方式适合拼接字符串</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>变量删除</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">unset var_name</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="自定义全局变量"><a href="#自定义全局变量" class="headerlink" title="自定义全局变量"></a>自定义全局变量</h3>]]></content>
+      <categories>
+        <category>Shell</category>
+      </categories>
+      <tags>
+        <tag>命令</tag>
+        <tag>Shell</tag>
+      </tags>
+  </entry>
 </search>
