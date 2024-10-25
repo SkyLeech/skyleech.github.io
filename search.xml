@@ -299,6 +299,24 @@
 <p>形参可以给默认值</p>
 <div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">getSum</span>(<span class="params">x = <span class="number">0</span>, y = <span class="number">0</span></span>)&#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">write</span>(num1 + num2)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
+<h3 id="函数声明与函数表达式"><a href="#函数声明与函数表达式" class="headerlink" title="函数声明与函数表达式"></a>函数声明与函数表达式</h3><ul>
+<li><strong>函数声明</strong>：在主代码流中声明为单独的语句的函数：</li>
+</ul>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 函数声明</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><strong>函数表达式</strong>：在一个表达式中或另一个语法结构中创建的函数。下面这个函数是在赋值表达式 <code>=</code> 右侧创建的：</li>
+</ul>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 函数表达式</span></span><br><span class="line"><span class="keyword">let</span> sum = <span class="keyword">function</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
+
+<p>更细微的差别是，JavaScript 引擎会在 <strong>什么时候</strong> 创建函数。</p>
+<p><strong>函数表达式是在代码执行到达时被创建，并且仅从那一刻起可用。</strong></p>
+<p>一旦代码执行到赋值表达式 <code>let sum = function…</code> 的右侧，此时就会开始创建该函数，并且可以从现在开始使用（分配，调用等）。</p>
+<p>函数声明则不同。</p>
+<p><strong>在函数声明被定义之前，它就可以被调用。</strong></p>
+<p>例如下面的代码会正常工作：</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">sayHi</span>(<span class="string">&quot;John&quot;</span>); <span class="comment">// Hello, John</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">sayHi</span>(<span class="params">name</span>) &#123;</span><br><span class="line">  <span class="title function_">alert</span>( <span class="string">`Hello, <span class="subst">$&#123;name&#125;</span>`</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
 
 
 <h2 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h2><div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">函数名()</span><br></pre></td></tr></table></figure></div>
@@ -352,6 +370,15 @@
 
 <h3 id="箭头函数this"><a href="#箭头函数this" class="headerlink" title="箭头函数this"></a>箭头函数this</h3><p>以前this的指向：谁调用的这个函数，this就指向谁</p>
 <p>箭头函数不会创建自己的this，它只会从自己的作用域链的上一层沿用this</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>函数是值。它们可以在代码的任何地方被分配，复制或声明。</li>
+<li>如果函数在主代码流中被声明为单独的语句，则称为“函数声明”。</li>
+<li>如果该函数是作为表达式的一部分创建的，则称其“函数表达式”。</li>
+<li>在执行代码块之前，内部算法会先处理函数声明。所以函数声明在其被声明的代码块内的任何位置都是可见的。</li>
+<li>函数表达式在执行流程到达时创建。</li>
+</ul>
+<p>在大多数情况下，当我们需要声明一个函数时，最好使用函数声明，因为函数在被声明之前也是可见的。这使我们在代码组织方面更具灵活性，通常也会使得代码可读性更高。</p>
+<p>所以，仅当函数声明不适合对应的任务时，才应使用函数表达式。</p>
 ]]></content>
       <categories>
         <category>JavaScript</category>
