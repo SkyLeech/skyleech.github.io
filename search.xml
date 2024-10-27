@@ -1393,4 +1393,59 @@
         <tag>Shell</tag>
       </tags>
   </entry>
+  <entry>
+    <title>npm常识</title>
+    <url>/2024/10/27/npm%E5%B8%B8%E8%AF%86/</url>
+    <content><![CDATA[<h2 id="npm简介"><a href="#npm简介" class="headerlink" title="npm简介"></a>npm简介</h2><p><code>npm</code>是 Node.js 标准的软件包管理器。</p>
+<p>它起初是作为下载和管理 Node.js 包依赖的方式，但其现在也已成为前端Javascript 中使用的工具。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol>
+<li><p>﻿﻿﻿初始化清单文件：<code>npm init -y</code>（得到 package.json 文件，有则略过此命令）</p>
+</li>
+<li><p>﻿﻿﻿下载软件包：<code>npm i 软件包名称</code></p>
+</li>
+<li><p>﻿﻿﻿使用软件包</p>
+</li>
+</ol>
+<h2 id="例子图解"><a href="#例子图解" class="headerlink" title="例子图解"></a>例子图解</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img.skyleech.me/2024/10/27/98633a9e8a71d2dbe484acc3e07e73da.png"
+                      alt="image-20241027224508883" title="取自黑马程序员"
+                ></p>
+<h2 id="安装所有依赖"><a href="#安装所有依赖" class="headerlink" title="安装所有依赖"></a>安装所有依赖</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img.skyleech.me/2024/10/27/0d5da6abf414ccdb5c7263cbe06b161f.png"
+                      alt="image-20241027230558989" title="取自黑马程序员"
+                ></p>
+<p>命令：<code>npm i</code></p>
+<h2 id="全局软件包和本地软件包"><a href="#全局软件包和本地软件包" class="headerlink" title="全局软件包和本地软件包"></a>全局软件包和本地软件包</h2><p>软件包区别：</p>
+<p>本地软件包：当前项目内使用，封装属性和方法，存在于 node_modules</p>
+<p>全局软件包：本机所有项目使用，封装命令和工具，存在于系统设置的位置</p>
+<h2 id="Node-js-总结"><a href="#Node-js-总结" class="headerlink" title="Node.js 总结"></a>Node.js 总结</h2><p>Node.js 包:</p>
+<p>概念：把模块文件，代码文件，其他资料聚合成一个文件夹项目包：编写项目需求和业务逻辑的文件夹</p>
+<p>软件包：封装工具和方法进行使用的文件夹（一般使用npm 管理）</p>
+<ul>
+<li><p>本地软件包：作用在当前项目，一般封装的属性&#x2F;方法，供项目调用编写业务需求</p>
+</li>
+<li><p>全局软件包：作用在所有项目，一般封装的命令&#x2F;工具，支撑项目运行</p>
+</li>
+</ul>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img.skyleech.me/2024/10/27/d8eef0c4096aa6cfd8a05cd2c7049298.png"
+                      alt="image-20241027231711643" title="取自黑马程序员"
+                ></p>
+]]></content>
+      <categories>
+        <category>nodejs</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>前端</tag>
+        <tag>nodejs</tag>
+        <tag>npm</tag>
+      </tags>
+  </entry>
 </search>
